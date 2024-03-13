@@ -26,6 +26,10 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIUiaJO8qqcQ4OFjocXxSTP-s62e1YQNI&libraries=places"></script>
+
+
 </head>
 
 <body class="sub_page">
@@ -37,7 +41,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
             <span>
-              Digian
+              CH Web Services
             </span>
           </a>
 
@@ -176,9 +180,9 @@
               <div class="contact_link_box">
                 <a href="">
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  <span>
+                  <!-- <span>
                     Location
-                  </span>
+                  </span> -->
                 </a>
                 <a href="">
                   <i class="fa fa-phone" aria-hidden="true"></i>
@@ -237,10 +241,41 @@
   <script src="js/bootstrap.js"></script>
   <script src="js/custom.js"></script>
   <!-- Google Map -->
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
+
 
 </body>
+<script type="text/javascript">
+
+  function initMap() {
+    // Initialize map with default options
+    map = new google.maps.Map(document.getElementById('googleMap'), {
+      zoom: 15,
+      streetViewControl: false,
+      mapTypeControl: false,
+      fullscreenControl: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+    });
+
+    // Geocode the specific address
+    let geocoder = new google.maps.Geocoder();
+    let address = "Rue Fendt 1, 1201 Geneva, Switzerland"; // Example address
+    geocoder.geocode({ 'address': address }, function (results, status) {
+      if (status == 'OK') {
+        // Place fixed marker at the geocoded location
+        map.setCenter(results[0].geometry.location);
+        fixedMarker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location,
+          title: 'Fixed Marker'
+        });
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+
+  }
+  initMap();
+
+</script>
 
 </html>
