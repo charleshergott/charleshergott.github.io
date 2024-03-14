@@ -103,6 +103,7 @@ body {
 .heading_container h2 {
   position: relative;
   font-weight: bold;
+  text-align: center;
 }
 
 .heading_container h2 span {
