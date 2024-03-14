@@ -317,6 +317,16 @@ a:focus {
   transform: translateY(-3px);
 }
 
+.logo_header {
+  width: auto;
+  height: auto;
+}
+
+.name_header {
+  width: auto;
+  height: auto;
+}
+
 /*end header section*/
 /* slider section */
 .slider_section {
@@ -1271,6 +1281,14 @@ a:focus {
   -ms-flex-align: start;
   align-items: center;
   margin-top: -100px;
+}
+
+@media screen and (max-width: 600px) {
+
+  .name_header {
+    display: none;
+  }
+
 }
 
 /*# sourceMappingURL=style.css.map */

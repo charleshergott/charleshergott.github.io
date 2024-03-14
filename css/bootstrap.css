@@ -4576,6 +4576,21 @@ input[type="button"].btn-block {
   white-space: nowrap;
 }
 
+@media screen and (max-width: 600px) {
+
+  .navbar-brand {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+
+  }
+}
+
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
