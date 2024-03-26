@@ -279,18 +279,18 @@
         <img src="/images/sales.gif" style="width: 250px; height: 250px;"></img>
         <h2></h2>
       </div>
-      <p>Available until 01/05/2024!<br>
-        Celebrate our website launch with a 50% discount on all services.</p>
+      <p>Available until 01/07/2024!<br>
+        Celebrate our website launch with a 50% discount on all services, just register on our mailing list.</p>
 
       <div id="emailContainer">
 
         <button id="popup-btn" class="popup-btn" onclick="claimDiscount()">Claim Discount Now</button>
-
         <form id="email_for_discount" style="display: none;"
           action="https://github.us8.list-manage.com/subscribe/post?u=e694253557b8ba548c2a2c434&amp;id=a1e74be2a6&amp;f_id=007e0ee0f0"
           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
           target="_blank">
-          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" />
+          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="YOUR EMAIL GOES HERE"
+            value="" />
           <div id="mce-responses" class="clear foot">
             <div class="response" id="mce-error-response" style="display: none"></div>
           </div>
@@ -385,7 +385,6 @@
                 </a>
                 <a href="https://api.whatsapp.com/send?phone=0041763718903">
                   <img src="/images/WhatsApp.png" width="25px" height="25px">
-
                   <span>
                     +41763718903
                   </span>
@@ -475,66 +474,47 @@
   </script>
 
   <script>
-    // Function to display the popup
     function showPopup() {
       document.getElementById('popupContainer').style.display = 'block';
     }
-
-    // Function to close the popup
     function closePopup() {
       document.getElementById('popupContainer').style.display = 'none';
     }
-
     function claimDiscount() {
-      // Show the input field for email
       document.getElementById('email_for_discount').style.display = 'block';
-
-      // Show the "Send" button
       document.getElementById('sendButton').style.display = 'block';
-
-      // Hide the "Claim Discount" button after it's clicked
       document.getElementById('popup-btn').style.display = 'none';
-
-      // Focus on the email input field
       document.getElementById('email_for_discount').focus();
     }
-
     function sendEmail() {
       let email = document.getElementById('mce-EMAIL').value;
       if (email.trim() === '') {
         alert('Please enter your email address.');
         return;
       }
-
-      // Generate a random discount code
-      let discountCode = generateDiscountCode();
-
-      // Display an alert with the discount code
-      alert('Discount code: ' + discountCode + '\n\nEmail sent to: ' + email);
-
-      // Close the popup
+      let discountCode = '6AKEQMLX';
+      // Copy the discount code to the clipboard
+      copyToClipboard(discountCode);
+      // Show alert message
+      alert('Discount code copied to clipboard!\n\nEmail sent to: ' + email);
       closePopup();
     }
-
-    function closePopup() {
-      document.getElementById('popupContainer').style.display = 'none';
+    function copyToClipboard(text) {
+      // Create a temporary input element
+      let tempInput = document.createElement('input');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      // Select the text in the input element
+      tempInput.select();
+      // Copy the selected text to the clipboard
+      document.execCommand('copy');
+      // Remove the temporary input element
+      document.body.removeChild(tempInput);
     }
-
-    function generateDiscountCode() {
-      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      var codeLength = 8;
-      var discountCode = '';
-      for (var i = 0; i < codeLength; i++) {
-        discountCode += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-      return discountCode;
-    }
-    // Show the popup after a delay when the page loads
     window.onload = function () {
       setTimeout(showPopup, 1000);
     };
   </script>
-
 
 </body>
 

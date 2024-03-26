@@ -1373,6 +1373,10 @@ a:focus {
   margin-top: 15px;
 }
 
+::placeholder {
+  text-align: center;
+}
+
 @keyframes wiggle {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
