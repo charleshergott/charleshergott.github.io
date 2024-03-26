@@ -260,7 +260,7 @@
               <li class="header" style="background-color:#4b15ed">Consulting</li>
               <li class="grey">Tailored Pricing Available</li>
               <li>Targetted Business Development</li>
-              <li class="grey"><a href="#" class="button">Sign Up</a></li>
+              <li class="grey"><a href="contact.html" class="button">Inquire</a></li>
             </ul>
           </div>
 
@@ -269,24 +269,6 @@
       </div>
 
   </section>
-
-  <!-- <div class="termsAndConditions">
-      <div class="heading_container">
-        <h2>
-          Terms and Conditions
-        </h2>
-        <p>
-        <ul>
-          <li>Minimum contract: 1 year</li>
-          <li>Discount: 10% if paid upfront</li>
-          <li>Third-party procurement: +10%</li>
-          <li>First consultation: free</li>
-          <li>API Integration: price on demand</li>
-
-        </ul>
-        </p>
-      </div>
-    </div> -->
 
   </div>
 
@@ -299,7 +281,25 @@
       </div>
       <p>Available until 01/05/2024!<br>
         Celebrate our website launch with a 50% discount on all services.</p>
-      <button class="popup-btn" onclick="claimDiscount()">Claim Discount Now</button>
+
+      <div id="emailContainer">
+
+        <button id="popup-btn" class="popup-btn" onclick="claimDiscount()">Claim Discount Now</button>
+
+        <form id="email_for_discount" style="display: none;"
+          action="https://github.us8.list-manage.com/subscribe/post?u=e694253557b8ba548c2a2c434&amp;id=a1e74be2a6&amp;f_id=007e0ee0f0"
+          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+          target="_blank">
+          <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" value="" />
+          <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none"></div>
+          </div>
+          <button class="popup-btn" id="sendButton" type="submit" style="display: none;" onclick="sendEmail()">
+            Get Discount Code
+          </button>
+        </form>
+
+      </div>
     </div>
   </div>
 
@@ -370,8 +370,6 @@
           </div>
 
           <!--END SUBSCRIBE FORM-->
-
-
 
           <div class="col-md-6 col-lg-3 mb-0 ml-auto">
             <div class="info_contact">
@@ -487,15 +485,53 @@
       document.getElementById('popupContainer').style.display = 'none';
     }
 
-    // Function to handle claiming discount (you can customize this)
-    // function claimDiscount() {
-    //   alert('Discount claimed!'); // You can replace this with your desired action
-    //   closePopup(); // Close the popup after claiming the discount
-    // }
+    function claimDiscount() {
+      // Show the input field for email
+      document.getElementById('email_for_discount').style.display = 'block';
 
+      // Show the "Send" button
+      document.getElementById('sendButton').style.display = 'block';
+
+      // Hide the "Claim Discount" button after it's clicked
+      document.getElementById('popup-btn').style.display = 'none';
+
+      // Focus on the email input field
+      document.getElementById('email_for_discount').focus();
+    }
+
+    function sendEmail() {
+      let email = document.getElementById('mce-EMAIL').value;
+      if (email.trim() === '') {
+        alert('Please enter your email address.');
+        return;
+      }
+
+      // Generate a random discount code
+      let discountCode = generateDiscountCode();
+
+      // Display an alert with the discount code
+      alert('Discount code: ' + discountCode + '\n\nEmail sent to: ' + email);
+
+      // Close the popup
+      closePopup();
+    }
+
+    function closePopup() {
+      document.getElementById('popupContainer').style.display = 'none';
+    }
+
+    function generateDiscountCode() {
+      var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var codeLength = 8;
+      var discountCode = '';
+      for (var i = 0; i < codeLength; i++) {
+        discountCode += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return discountCode;
+    }
     // Show the popup after a delay when the page loads
     window.onload = function () {
-      setTimeout(showPopup, 15000);
+      setTimeout(showPopup, 1000);
     };
   </script>
 
