@@ -65,6 +65,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://billing.stripe.com/p/login/5kA5lh69R7MPdJCaEE">Log in</a>
+              </li>
             </ul>
             <!-- <div class="quote_btn-container">
               <a href="" class="quote_btn">
@@ -192,30 +195,36 @@
         <div class="pricingTable">
 
 
-          <h2 style="text-align:center">Responsive Pricing Tables</h2>
-          <p style="text-align:center">Resize the browser window to see the effect.</p>
+          <div class="heading_container">
+            <h2>
+              Pricing
+            </h2>
+            <p>
+              Choose the monthly package that suits your needs.<br>
+              Or call us for a free first-time consultation!
+            </p>
+          </div>
 
           <div class="columns">
             <ul class="price">
-              <li class="header">Basic</li>
+              <li class="header">Startup</li>
               <li class="grey">400 CHF / month</li>
               <li>Template Website</li>
               <li>Domain</li>
               <li>Marketing Integration</li>
-              <!-- <li>1GB Bandwidth</li> -->
-              <li class="grey"><a href="#" class="button">Sign Up</a></li>
+              <li class="grey"><a href="https://buy.stripe.com/5kA5kn46rbm84Q83cg" class="button">Purchase</a></li>
             </ul>
           </div>
 
           <div class="columns">
             <ul class="price">
-              <li class="header" style="background-color:#04AA6D">Pro</li>
-              <li class="grey">800 HCF / month</li>
+              <li class="header" style="background-color:#04AA6D">2.0</li>
+              <li class="grey">800 CHF / month</li>
               <li>Website Design</li>
               <li>Domain</li>
               <li>WordPress Integration</li>
               <li>Marketing Integration</li>
-              <li class="grey"><a href="#" class="button">Sign Up</a></li>
+              <li class="grey"><a href="https://buy.stripe.com/6oE147fP90Hubew8wB" class="button">Purchase</a></li>
             </ul>
           </div>
 
@@ -228,7 +237,7 @@
               <li>WordPress Integration</li>
               <li>Marketing Integration</li>
               <li>Sectorial Boost</li>
-              <li class="grey"><a href="#" class="button">Sign Up</a></li>
+              <li class="grey"><a href="https://buy.stripe.com/9AQ0039qL75S3M4fZ4" class="button">Purchase</a></li>
             </ul>
           </div>
 
@@ -248,7 +257,7 @@
           <div class="columns">
             <ul class="price">
               <li class="header" style="background-color:#4b15ed">Consulting</li>
-              <li class="grey">5000 CHF / month</li>
+              <li class="grey">Tailored Pricing Available</li>
               <li>Targetted Business Development</li>
               <li class="grey"><a href="#" class="button">Sign Up</a></li>
             </ul>
@@ -278,6 +287,19 @@
       </div>
     </div> -->
 
+  </div>
+
+  <div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div class="popup-gif">
+        <img src="/images/sales.gif" style="width: 250px; height: 250px;"></img>
+        <h2></h2>
+      </div>
+      <p>Available until 01/05/2024!<br>
+        Celebrate our website launch with a 50% discount on all services.</p>
+      <button class="popup-btn" onclick="claimDiscount()">Claim Discount Now</button>
+    </div>
   </div>
 
   <div class="footer_container">
@@ -430,6 +452,8 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
   <!-- End Google Map -->
 
+  <script async src="https://js.stripe.com/v3/buy-button.js">
+  </script>
   <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
   <script type="text/javascript">
     (function ($) {
@@ -449,6 +473,29 @@
       ftypes[5] = 'dropdown';
     })(jQuery);
     var $mcj = jQuery.noConflict(true);
+  </script>
+
+  <script>
+    // Function to display the popup
+    function showPopup() {
+      document.getElementById('popupContainer').style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+      document.getElementById('popupContainer').style.display = 'none';
+    }
+
+    // Function to handle claiming discount (you can customize this)
+    // function claimDiscount() {
+    //   alert('Discount claimed!'); // You can replace this with your desired action
+    //   closePopup(); // Close the popup after claiming the discount
+    // }
+
+    // Show the popup after a delay when the page loads
+    window.onload = function () {
+      setTimeout(showPopup, 15000);
+    };
   </script>
 
 
