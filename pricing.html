@@ -66,9 +66,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a class="nav-link" href="https://billing.stripe.com/p/login/5kA5lh69R7MPdJCaEE">Log in</a>
-              </li>
+              </li> -->
             </ul>
             <!-- <div class="quote_btn-container">
               <a href="" class="quote_btn">
@@ -474,7 +474,46 @@
   </script>
 
   <script>
-    function _0x5a78() { const _0x5d499f = ['6AKEQMLX', '585pZyvjm', 'select', 'createElement', 'sendButton', 'style', '21537HHYiUh', 'getElementById', '26628LPDgsx', '54stFotQ', 'email_for_discount', 'body', '2320280ZKmLsO', 'value', '9122148bChkts', 'popupContainer', '7930Onadch', 'popup-btn', '701528gViJvQ', '64434pvqKAM', 'block', 'copy', 'Please\x20enter\x20your\x20email\x20address.', 'appendChild', 'input', '2339716HYpgzA', 'execCommand', 'display', 'onload', 'none', 'mce-EMAIL']; _0x5a78 = function () { return _0x5d499f; }; return _0x5a78(); } const _0x5f4d95 = _0x373f; function _0x373f(_0x5874b8, _0x49908b) { const _0x5a7826 = _0x5a78(); return _0x373f = function (_0x373f78, _0x267133) { _0x373f78 = _0x373f78 - 0x99; let _0x5bf71b = _0x5a7826[_0x373f78]; return _0x5bf71b; }, _0x373f(_0x5874b8, _0x49908b); } (function (_0x18cb0d, _0x1a8c4d) { const _0xbd6a7d = _0x373f, _0x29234c = _0x18cb0d(); while (!![]) { try { const _0x16a71f = -parseInt(_0xbd6a7d(0xa0)) / 0x1 + parseInt(_0xbd6a7d(0xa7)) / 0x2 + -parseInt(_0xbd6a7d(0xb6)) / 0x3 * (parseInt(_0xbd6a7d(0xb5)) / 0x4) + -parseInt(_0xbd6a7d(0xae)) / 0x5 * (-parseInt(_0xbd6a7d(0xa1)) / 0x6) + parseInt(_0xbd6a7d(0x9c)) / 0x7 + -parseInt(_0xbd6a7d(0x9a)) / 0x8 + parseInt(_0xbd6a7d(0xb3)) / 0x9 * (-parseInt(_0xbd6a7d(0x9e)) / 0xa); if (_0x16a71f === _0x1a8c4d) break; else _0x29234c['push'](_0x29234c['shift']()); } catch (_0x5a4443) { _0x29234c['push'](_0x29234c['shift']()); } } }(_0x5a78, 0xafe3f)); function showPopup() { const _0x58017a = _0x373f; document[_0x58017a(0xb4)](_0x58017a(0x9d))['style'][_0x58017a(0xa9)] = _0x58017a(0xa2); } function closePopup() { const _0x267b65 = _0x373f; document[_0x267b65(0xb4)]('popupContainer')[_0x267b65(0xb2)][_0x267b65(0xa9)] = 'none'; } function claimDiscount() { const _0x472df5 = _0x373f; document[_0x472df5(0xb4)]('email_for_discount')[_0x472df5(0xb2)][_0x472df5(0xa9)] = _0x472df5(0xa2), document[_0x472df5(0xb4)](_0x472df5(0xb1))[_0x472df5(0xb2)]['display'] = _0x472df5(0xa2), document[_0x472df5(0xb4)](_0x472df5(0x9f))['style'][_0x472df5(0xa9)] = _0x472df5(0xab), document['getElementById'](_0x472df5(0xb7))['focus'](); } function sendEmail() { const _0xa5ba51 = _0x373f; let _0x7331ca = document[_0xa5ba51(0xb4)](_0xa5ba51(0xac))[_0xa5ba51(0x9b)]; if (_0x7331ca['trim']() === '') { alert(_0xa5ba51(0xa4)); return; } let _0x200a19 = _0xa5ba51(0xad); copyToClipboard(_0x200a19), alert('Discount\x20code\x20copied\x20to\x20clipboard!\x0a\x0aEmail\x20sent\x20to:\x20' + _0x7331ca), closePopup(); } function copyToClipboard(_0xb2adb1) { const _0x21b867 = _0x373f; let _0x1981fc = document[_0x21b867(0xb0)](_0x21b867(0xa6)); _0x1981fc[_0x21b867(0x9b)] = _0xb2adb1, document[_0x21b867(0x99)][_0x21b867(0xa5)](_0x1981fc), _0x1981fc[_0x21b867(0xaf)](), document[_0x21b867(0xa8)](_0x21b867(0xa3)), document[_0x21b867(0x99)]['removeChild'](_0x1981fc); } window[_0x5f4d95(0xaa)] = function () { setTimeout(showPopup, 0x2710); };
+    function showPopup() {
+      document.getElementById('popupContainer').style.display = 'block';
+    }
+    function closePopup() {
+      document.getElementById('popupContainer').style.display = 'none';
+    }
+    function claimDiscount() {
+      document.getElementById('email_for_discount').style.display = 'block';
+      document.getElementById('sendButton').style.display = 'block';
+      document.getElementById('popup-btn').style.display = 'none';
+      document.getElementById('email_for_discount').focus();
+    }
+    function sendEmail() {
+      let email = document.getElementById('mce-EMAIL').value;
+      if (email.trim() === '') {
+        alert('Please enter your email address.');
+        return;
+      }
+      let discountCode = '6AKEQMLX';
+      // Copy the discount code to the clipboard
+      copyToClipboard(discountCode);
+      // Show alert message
+      alert('Discount code copied to clipboard!');
+      closePopup();
+    }
+    function copyToClipboard(text) {
+      // Create a temporary input element
+      let tempInput = document.createElement('input');
+      tempInput.value = text;
+      document.body.appendChild(tempInput);
+      // Select the text in the input element
+      tempInput.select();
+      // Copy the selected text to the clipboard
+      document.execCommand('copy');
+      // Remove the temporary input element
+      document.body.removeChild(tempInput);
+    }
+    window.onload = function () {
+      setTimeout(showPopup, 10000);
+    };
   </script>
 
 </body>
