@@ -7,6 +7,220 @@ body {
   overflow-x: hidden;
 }
 
+:root {
+  --platinum: linear-gradient(135deg, #e6e9f0 0%, #eef1f5 100%);
+  --gold: linear-gradient(135deg, #f5f7fa 0%, #f3e9d2 100%);
+  --silver: linear-gradient(135deg, #f9f9f9 0%, #e9ecef 100%);
+  --text-dark: #2b2d42;
+  --text-light: #8d99ae;
+  --accent: #ef233c;
+  --shadow: 0 30px 60px -10px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  background: #f8f9fa;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.pricing-section {
+  max-width: 1400px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.section-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #2b2d42, #4a4e69);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-header p {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.pricing-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.tier {
+  padding: 3rem 2.5rem;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.tier:hover {
+  transform: translateY(-5px);
+  z-index: 2;
+}
+
+.tier:nth-child(1) {
+  background: var(--silver);
+}
+
+.tier:nth-child(2) {
+  background: var(--gold);
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tier:nth-child(3) {
+  background: var(--platinum);
+}
+
+.tier-header {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.tier-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.tier:nth-child(2) .tier-name::after {
+  content: "BEST VALUE";
+  font-size: 0.7rem;
+  background: var(--accent);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+.tier-price {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 1.5rem 0;
+  position: relative;
+  display: inline-block;
+}
+
+.tier-price::before {
+  content: attr(data-currency);
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: absolute;
+  top: 0.5rem;
+  left: -1.2rem;
+}
+
+.tier-period {
+  font-size: 1rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.tier-features {
+  margin: 3rem 0;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.feature-icon {
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: var(--text-dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.tier:nth-child(2) .feature-icon {
+  background: var(--accent);
+}
+
+.feature-text {
+  font-weight: 500;
+}
+
+.feature-text strong {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.tier-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 2.5rem 0;
+}
+
+.tier-cta {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid var(--text-dark);
+  color: var(--text-dark);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tier:nth-child(2) .tier-cta {
+  background: var(--text-dark);
+  color: white;
+}
+
+.tier-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .pricing-tiers {
+    grid-template-columns: 1fr;
+  }
+
+  .tier {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .tier:nth-child(2) {
+    border-left: none;
+    border-right: none;
+  }
+}
+
 
 
 /* CSS */
