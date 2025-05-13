@@ -279,7 +279,7 @@ body {
 }
 
 .layout_padding {
-  padding: 90px 0;
+  padding: 60px 0;
 }
 
 .layout_margin {
@@ -319,7 +319,7 @@ body {
 .heading_container h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -349,7 +349,6 @@ a:focus {
   box-shadow: none;
 }
 
-/*header section*/
 .hero_area {
   position: relative;
   min-height: 100vh;
@@ -369,9 +368,9 @@ a:focus {
   border-radius: 0 0 45px 0;
 }
 
-.header_section {
+/* .header_section {
   padding: 15px 0;
-}
+} */
 
 .header_section .container-fluid {
   padding-right: 25px;
@@ -381,7 +380,7 @@ a:focus {
 .navbar-brand span {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2c3e50;
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -1095,6 +1094,7 @@ a:focus {
   background-color: #7335b7;
   color: #ffffff;
   border-radius: 250px 0 250px 0;
+  padding: 50px;
 }
 
 .about_section .row {
@@ -1499,15 +1499,6 @@ a:focus {
   margin-top: -100px;
 }
 
-@media screen and (max-width: 600px) {
-
-  .name_header {
-    display: none;
-  }
-
-}
-
-/*# sourceMappingURL=style.css.map */
 
 * {
   box-sizing: border-box;
@@ -1639,5 +1630,9 @@ a:focus {
 
   .photoCharles {
     flex-direction: column;
+  }
+
+  .heading_container h2 {
+    margin-left: 10px;
   }
 }
