@@ -1362,6 +1362,14 @@ a:focus {
   color: #ffffff;
 }
 
+.contact_heading_container,
+.index_heading_container,
+.portfolio_heading_container,
+.service_heading_container,
+.pricing_section-header {
+  color: #7335B7;
+}
+
 .info_section .info_contact .contact_link_box a i {
   margin-right: 5px;
 }
