@@ -290,10 +290,7 @@ body {
 }
 
 .heading_container {
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   max-width: 800px;
-  margin: 0 auto;
 }
 
 .heading_container h2 {
@@ -459,6 +456,17 @@ a:focus {
 .slider_section .detail-box h1 {
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+.service-btn-box {
+  background: blue;
+  border: solid;
+  padding: 20px;
+  width: 200px;
+}
+
+.about-description {
+  width: 500px;
 }
 
 .slider_section .detail-box .btn-box {
@@ -983,9 +991,9 @@ a:focus {
 .about_section .row {
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .about_section .img-box {
