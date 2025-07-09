@@ -416,10 +416,95 @@ a:focus {
 }
 
 .name_header {
-  width: auto;
-  height: auto;
-  display: flex;
-  flex-direction: column;
+  padding: 3rem 1.5rem 2.5rem;
+  text-align: center;
+}
+
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.name_header span {
+  display: block;
+  font-weight: 800;
+  background-clip: text;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.7);
+  }
+
+  100% {
+    text-shadow: 0 0 20px rgba(165, 180, 252, 0.9), 0 0 30px rgba(99, 102, 241, 0.5);
+  }
+}
+
+.name_header small {
+  display: block;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  color: #cbd5e1;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+}
+
+.navbar-toggler:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .name_header span {
+    font-size: 2rem;
+    padding-right: 50px;
+  }
+
+  .name_header small {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 /*end header section*/
