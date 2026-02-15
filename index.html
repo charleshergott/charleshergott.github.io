@@ -2,807 +2,856 @@
 <html lang="en">
 
 <head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords" content="webdesign, design, web, programming, UI, UX, SEO, Google, internet, website" />
-    <meta name="author" content="Charles Hergott" />
-    <meta property="og:title" content="Charles Hergott Web and Marketing Services">
-    <meta property="og:description"
-        content="Hosted by The UAV Leasing Company, an Irish company specialized in aircraft sales, leasing and aircraft charters. Corp Jet proposes traditional aircraft charters as well as EMPTY LEGS and an innovative EMPTY LEGS app.">
-    <meta property="og:image" content="https://i.im.ge/2024/03/26/WFEbHq.WhatsApp-Image-2024-03-13-at-16-06-49.jpeg">
-    <meta property="og:url" content="https://charleshergott.github.io/">
-    <link rel="icon" href="https://i.im.ge/2024/03/26/WFEyoh.favicon-ico.gif" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Charles Hergott · AI/ PWA architect</title>
+    <!-- Google Fonts + modern clean CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&family=Space+Grotesk:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <title>Innovative Mobile App Services</title>
+        body {
+            font-family: "Inter", sans-serif;
+            background: #f8fafd;
+            color: #1a2639;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
 
-    <link rel="stylesheet" type="text/css" href="css/style-navbar.css" />
-    <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
 
-    <!-- font awesome style -->
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
+        /* navigation — minimal, airy */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 1.5rem 0;
+        }
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet" />
-    <!-- responsive style -->
-    <link href="css/responsive.css" rel="stylesheet" />
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
 
-    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        #mc_embed_signup {
+        .logo-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 30px;
+            object-fit: cover;
+            box-shadow: 0 8px 18px -6px rgba(0, 20, 50, 0.1);
+        }
+
+        .name_header span {
+            font-weight: 600;
+            font-size: 1.25rem;
+            display: block;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            color: #1a2639;
+        }
+
+        .name_header small {
+            font-size: 0.85rem;
+            color: #4a5568;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2d3a5e;
+            font-size: 1rem;
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #0f2b8f;
+            border-bottom-color: #0f2b8f;
+        }
+
+        /* hero — clean and solid */
+        .hero {
+            padding: 2rem 0 3rem;
+        }
+
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1 1 300px;
+        }
+
+        .hero-badge {
+            background: #e8edf9;
+            color: #0f2b8f;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #0a192f;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            color: #2d3a5e;
+            max-width: 550px;
+            margin: 1.8rem 0 2rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #0f2b8f;
+            color: white;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+            box-shadow: 0 12px 20px -12px #0f2b8f;
+        }
+
+        .btn-primary:hover {
+            background: #1c3db0;
+            transform: scale(1.02);
+        }
+
+        .btn-outline {
             background: transparent;
-            font: 14px Helvetica, Arial, sans-serif;
-            width: 300px;
+            border: 1.5px solid #2d3a5e;
+            color: #2d3a5e;
+            padding: 0.9rem 2.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn-outline:hover {
+            background: #ffffff;
+            border-color: #0f2b8f;
+            color: #0f2b8f;
+        }
+
+        .hero-image {
+            flex: 0 0 280px;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* section heading — now solid dark */
+        .section-heading {
+            margin: 4rem 0 2rem;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0a192f;
+            display: inline-block;
+        }
+
+        .section-heading p {
+            font-size: 1.1rem;
+            color: #4a5568;
+            margin-top: 0.5rem;
+        }
+
+        /* cards — subtle, no blue gradients on text */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card,
+        .portfolio-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 10px 25px -8px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s ease;
+            border: 1px solid #eef2f6;
+        }
+
+        .service-card:hover,
+        .portfolio-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 25px 35px -12px rgba(15, 43, 143, 0.08);
+            border-color: #d0dcf0;
+        }
+
+        .card-img {
+            width: 60px;
+            height: 60px;
+            background: #edf2ff;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.8rem;
+        }
+
+        .card-img img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+        }
+
+        .service-card h5,
+        .portfolio-card h5 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6rem;
+            color: #0a192f;
+        }
+
+        .service-card p {
+            color: #334155;
+            font-size: 0.98rem;
+            margin: 1rem 0 1.5rem;
+        }
+
+        .card-link {
+            text-decoration: none;
+            font-weight: 600;
+            color: #0f2b8f;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-link i {
+            font-size: 0.9rem;
+            transition: transform 0.15s;
+        }
+
+        .card-link:hover i {
+            transform: translateX(4px);
+        }
+
+        .portfolio-card {
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .portfolio-card .card-img {
+            margin: 0 auto 1.5rem;
+            background: #f0f4fe;
+        }
+
+        /* pricing cards — clean, no blue gradient text */
+        .pricing-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin: 3rem 0;
+        }
+
+        .pricing-col {
+            flex: 1 1 260px;
+            background: white;
+            border-radius: 32px;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.03);
+            transition: all 0.2s;
+            border: 1px solid #eef2f6;
+        }
+
+        .pricing-col.popular {
+            border: 2px solid #0f2b8f;
+            transform: scale(1.02);
+            background: #ffffff;
+            box-shadow: 0 20px 35px -12px rgba(15, 43, 143, 0.12);
+        }
+
+        .pricing-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: #0a192f;
+        }
+
+        .pricing-price {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0f2b8f;
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin: 1rem 0 0.5rem;
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #64748b;
+        }
+
+        .pricing-period {
+            color: #4a5568;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            gap: 0.7rem;
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+            color: #1e293b;
+        }
+
+        .feature-list i {
+            color: #0f2b8f;
+            width: 20px;
+            font-size: 1rem;
+            margin-top: 2px;
+        }
+
+        .pricing-btn {
+            background: #f1f5fe;
+            color: #0f2b8f;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.9rem;
+            border-radius: 50px;
+            transition: background 0.2s;
+            margin-top: 2rem;
+        }
+
+        .pricing-btn:hover {
+            background: #e0eaff;
+        }
+
+        /* about section — clean white card */
+        .about-wrap {
+            background: white;
+            border-radius: 48px;
+            padding: 3rem;
+            margin: 3rem 0;
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            align-items: center;
+            box-shadow: 0 15px 30px -12px rgba(0, 0, 0, 0.02);
+            border: 1px solid #eef2f6;
+        }
+
+        .about-img {
+            flex: 0 0 160px;
+        }
+
+        .about-img img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 20px 25px -8px rgba(15, 43, 143, 0.15);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            font-weight: 650;
+            margin-bottom: 0.5rem;
+            color: #0a192f;
+        }
+
+        .about-text p {
+            color: #334155;
+            font-size: 1.05rem;
+        }
+
+        .cert-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            margin-top: 1rem;
+            background: #f0f3fc;
+            padding: 0.5rem 1.2rem;
+            border-radius: 60px;
+            text-decoration: none;
+            color: #0f2b8f;
+            font-weight: 500;
+        }
+
+        /* footer */
+        .footer {
+            background: #0a142f;
+            color: white;
+            border-radius: 48px 48px 0 0;
+            padding: 3rem 0 2rem;
+            margin-top: 5rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .footer h5 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.2px;
+            color: white;
+        }
+
+        .footer-links a {
+            color: #b3c2e0;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.2s;
+            font-size: 0.98rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: #b3c2e0;
+            margin-bottom: 1.2rem;
+            font-size: 0.98rem;
+        }
+
+        .contact-item i {
+            width: 24px;
+            color: white;
+        }
+
+        .contact-item a {
+            color: #b3c2e0;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: white;
+        }
+
+        .social-row {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .social-row a {
+            background: #1f2a4a;
+            width: 42px;
+            height: 42px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: 0.15s;
+        }
+
+        .social-row a:hover {
+            background: #2e3c6a;
+        }
+
+        .subscribe-form {
+            display: flex;
+            max-width: 300px;
+            margin-top: 1rem;
+            background: #1f294a;
+            border-radius: 60px;
+            padding: 0.2rem;
+        }
+
+        .subscribe-form input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 0.8rem 1rem;
+            color: white;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .subscribe-form input::placeholder {
+            color: #98a9cc;
+        }
+
+        .subscribe-form button {
+            background: white;
+            border: none;
+            border-radius: 60px;
+            padding: 0.6rem 1.3rem;
+            font-weight: 600;
+            color: #0a142f;
+            cursor: pointer;
+        }
+
+        .version {
+            text-align: right;
+            color: #6679a3;
+            font-size: 0.8rem;
+            margin-top: 3rem;
+        }
+
+        hr {
+            border: 1px solid #1f2b4a;
+            margin: 2rem 0 1rem;
+        }
+
+        /* small adjustments */
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: start;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .pricing-col.popular {
+                transform: scale(1);
+            }
+        }
+
+        /* extra fix: any remaining gradient text is removed */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        span,
+        a,
+        li,
+        div {
+
+            -webkit-text-fill-color: unset;
+            background: none;
+            color: inherit;
         }
     </style>
-
 </head>
-<script src="//code.tidio.co/zthb8osqqnpyac85qdvktnpzzlpniobq.js" async></script>
 
 <body>
-    <div translate="no" class='mailmunch-forms-widget-1141543'></div>
-    <div class="hero_area">
-        <!-- header section strats -->
-        <header class="header_section">
-            <nav class="navbar navbar-expand-lg custom_nav-container ">
-                <div class="navbar-brand" href="">
-                    <div class="logo_header">
-                        <a href="/index.html"><img src="/images/logo_CHWMS.jpeg"
-                                style="height: 100px; width: 100px;"></img></a>
-                    </div>
-                    <div class="name_header">
-                        <span>We add AI into your digital workflow</span>
-                        <small>Let us know your pain points and we'll solve them with AI</small>
-
-                    </div>
-
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class=""> </span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="index.html">Home
-                                    <span class="sr-only">(current)</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html"> About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="service.html">Services
-
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact Us</a>
-                            </li>
-                            <!-- <li class="nav-item">
-                              <a class="nav-link" href="https://billing.stripe.com/p/login/5kA5lh69R7MPdJCaEE">Stripe
-                                Log
-                                in</a>
-                            </li> -->
-                        </ul>
-                    </div>
+    <div class="container">
+        <!-- navigation -->
+        <nav class="navbar">
+            <div class="logo-area">
+                <img src="https://i.im.ge/2024/03/26/WFEyoh.favicon-ico.gif" alt="CH logo" class="logo-img"
+                    onerror="this.src='https://via.placeholder.com/60'">
+                <div class="name_header">
+                    <span>Charles Hergott</span>
+                    <small>AI · PWA · digital workflow</small>
                 </div>
-            </nav>
-        </header>
-        <!-- end header section -->
-        <!-- slider section -->
-        <section class="slider_section ">
-            <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="img-box">
-                                        <img src="images/about-img.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Progressive Web App Specialist
-                                        </h1>
-                                        <p>
-                                            Between vibe creation and real coding
-                                        </p>
-                                        <!-- <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Contact Us
-                                            </a>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="img-box">
-                                        <img src="images/slider-img.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            Chat Systems
-                                        </h1>
-                                        <p>
-                                            Innovative Software for Ultimate Private Messaging
-                                        </p>
-                                        <!-- <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Contact Us
-                                            </a>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item ">
-                        <div class="container ">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="img-box">
-                                        <img src="images/contact-img.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="detail-box">
-                                        <h1>
-                                            WhatsApp Integration
-                                        </h1>
-                                        <p>
-                                            Integrate AI into your WhatsApp workflow
-                                        </p>
-                                        <!-- <div class="btn-box">
-                                            <a href="" class="btn1">
-                                                Contact Us
-                                            </a>
-                                        </div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <ol class="carousel-indicators">
-                    <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-                    <li data-target="#customCarousel1" data-slide-to="1"></li>
-                    <li data-target="#customCarousel1" data-slide-to="2"></li>
-                </ol>
             </div>
-
-        </section>
-        <!-- end slider section -->
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
     </div>
 
-    <!-- service section -->
-    <section class="service_section layout_padding">
-        <div class="container">
-            <div class="index_heading_container">
-                <h2>
-                    Hybrid Smartphone Apps
-                </h2>
-                <p>
-                    Skip the costly native build. A Progressive Web App (PWA) gives your users an app-like
-                    experience—fast, installable, and
-                    right from your website.
-                    Affordable. Maintainable. Launch-ready.
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/database.gif" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Get a FREE domain from Google!
-                            </h5>
-                            <!-- <p>
-                                Navigate Ambiguity: <br>
-                                <span style="font-weight: bold ; color: blue;">
-                                    Your Brand's True North
-                                </span>
-                            </p> -->
-                            <!-- <a href="service.html">
-                                <span>
-                                    Read More
-                                </span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/plan.gif" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Upload the app's draft...still free
-                            </h5>
-                            <!-- <p>
-                                Innovate, Iterate, Inspire: <br>
-                                <span style="font-weight: bold ; color: blue;">
-                                    Creating Messages That Resonate
-                                </span>
-                            </p> -->
-                            <!-- <a href="service.html">
-                                <span>
-                                    Read More
-                                </span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/three-friends.gif" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Test the app in-house quickly...
-                            </h5>
-                            <!-- <p>
-                                Digital Alchemy: <br>
-                                <span style="font-weight: bold ; color: blue;">
-                                    Turning Ideas into Interactive Experiences
-                                </span>
-                            </p> -->
-                            <!-- <a href="service.html">
-                                <span>
-                                    Read More
-                                </span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/domain.gif" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Get a custom domain and...voila
-                            </h5>
-                            <!-- <p>
-                                Connect, Engage, Influence: <br>
-                                <span style="font-weight: bold ; color: blue;">
-                                    Sharing Your Story Effectively
-                                </span>
-                            </p> -->
-                            <!-- <a href="service.html">
-                                <span>
-                                    Read More
-                                </span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </a> -->
-                        </div>
-                    </div>
+    <!-- hero -->
+    <div class="container hero">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <span class="hero-badge"><i class="fa-regular fa-star" style="margin-right: 6px;"></i> PWA & AI
+                    integration</span>
+                <h1>We add AI into your digital workflow</h1>
+                <p>From vibe‑coded prototypes to production‑ready progressive web apps — we turn your pain points into
+                    smooth, installable experiences.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn-primary"><i class="fa-regular fa-comment"
+                            style="margin-right: 8px;"></i>Talk pain points</a>
+                    <a href="#portfolio" class="btn-outline">See live apps <i class="fa-regular fa-arrow-right"
+                            style="margin-left: 8px;"></i></a>
                 </div>
             </div>
-            <!-- <div class="btn-box">
-                <a href="service.html">
-                    View More
-                </a>
-            </div> -->
-        </div>
-    </section>
-    <!-- end service section -->
-
-    <!-- about section -->
-
-    <section class="about_section layout_padding">
-        <div class="container  ">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>
-                                About Us
-                            </h2>
-                        </div>
-                        <p>
-                            "We specialize in <strong>Progressive Web Apps (PWAs)</strong> — fast, reliable,
-                            installable
-                            experiences that combine the reach of the web
-                            with the feel of a native app. Your service or product deserves to live beyond a static
-                            website. It should
-                            follow your users wherever they go — and a PWA makes that possible.
-                            <br><br>
-                            We bring real <strong>Sector-Specific Knowledge</strong> to every project, aligning
-                            technology with your
-                            business needs and your <strong>Target Audience</strong>.
-                            That’s how we turn browsers into loyal users."
-                            <br><br>
-                            Charles Hergott
-                        </p>
-                        <a href="about.html">
-                            Read More
-                        </a>
-                    </div>
-
-                </div>
-
+            <div class="hero-image">
+                <img src="https://i.im.ge/2024/03/26/WFEbHq.WhatsApp-Image-2024-03-13-at-16-06-49.jpeg"
+                    alt="CH showcase" onerror="this.src='https://via.placeholder.com/280x280'">
             </div>
         </div>
-    </section>
-
-    <!-- end about section -->
-
-    <!-- case section -->
-
-    <section class="service_section layout_padding">
-        <div class="container">
-            <div class="portfolio_heading_container">
-                <h2>
-                    Portfolio
-                </h2>
-                <p>
-                    Here are examples of PWA apps we've already produced and which are user-ready
-                </p>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/BlinkShare_logo.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                BlinkShare
-                            </h5>
-                            <a href="https://blink-share.com" target="_blank" rel="noopener noreferrer">
-                                <span>Try it</span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/blinkpic_logo_512x512.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                BlinkPic
-                            </h5>
-                            <a href="https://blinkpic-f7456.web.app/#/" target="_blank" rel="noopener noreferrer">
-                                <span>Try it</span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/offfline_logo_512x512.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                OfffLine
-                            </h5>
-                            <a href="https://offfline.com/" target="_blank" rel="noopener noreferrer">
-                                <span>Try it</span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="box">
-                        <div class="img-box">
-                            <img src="images/logo_business_card.png" alt="">
-                        </div>
-                        <div class="detail-box">
-                            <h5>
-                                Business Card App
-                            </h5>
-                            <a href="https://your-virtual-business-card.web.app/" target="_blank"
-                                rel="noopener noreferrer">
-                                <span>Try it</span>
-                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="btn-box">
-                    <a href="service.html">
-                        View More
-                    </a>
-                </div> -->
-        </div>
-    </section>
-
-    <!-- end case section -->
-
-    <!-- client section -->
-    <!-- <section class="client_section ">
-        <div class="container">
-            <div class="heading_container heading_center">
-                <h2>
-                    Testimonial
-                </h2>
-            </div>
-        </div>
-        <div id="customCarousel2" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10 mx-auto">
-                                <div class="box">
-                                    <div class="img-box">
-                                        <img src="images/client.jpg" alt="">
-                                    </div>
-                                    <div class="detail-box">
-                                        <div class="client_info">
-                                            <div class="client_name">
-                                                <h5>
-                                                    Morojink
-                                                </h5>
-                                                <h6>
-                                                    Customer
-                                                </h6>
-                                            </div>
-                                            <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                        </div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore
-                                            et
-                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                            ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse
-                                            cillum
-                                            dolore eu fugia
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10 mx-auto">
-                                <div class="box">
-                                    <div class="img-box">
-                                        <img src="images/client.jpg" alt="">
-                                    </div>
-                                    <div class="detail-box">
-                                        <div class="client_info">
-                                            <div class="client_name">
-                                                <h5>
-                                                    Morojink
-                                                </h5>
-                                                <h6>
-                                                    Customer
-                                                </h6>
-                                            </div>
-                                            <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                        </div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore
-                                            et
-                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                            ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse
-                                            cillum
-                                            dolore eu fugia
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-10 mx-auto">
-                                <div class="box">
-                                    <div class="img-box">
-                                        <img src="images/client.jpg" alt="">
-                                    </div>
-                                    <div class="detail-box">
-                                        <div class="client_info">
-                                            <div class="client_name">
-                                                <h5>
-                                                    Morojink
-                                                </h5>
-                                                <h6>
-                                                    Customer
-                                                </h6>
-                                            </div>
-                                            <i class="fa fa-quote-left" aria-hidden="true"></i>
-                                        </div>
-                                        <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                            tempor incididunt ut
-                                            labore
-                                            et
-                                            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                            ullamco laboris nisi ut
-                                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse
-                                            cillum
-                                            dolore eu fugia
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <ol class="carousel-indicators">
-                <li data-target="#customCarousel2" data-slide-to="0" class="active"></li>
-                <li data-target="#customCarousel2" data-slide-to="1"></li>
-                <li data-target="#customCarousel2" data-slide-to="2"></li>
-            </ol>
-        </div>
-    </section> -->
-    <!-- end client section -->
-
-
-
-    <!-- contact section -->
-
-    <!-- <section class="contact_section layout_padding">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-5 col-lg-4 offset-md-1">
-                    <div class="form_container">
-                        <div class="heading_container">
-                            <h2>
-                                Request A Call back
-                            </h2>
-                        </div>
-                        <form action="">
-                            <div>
-                                <input type="text" placeholder="Full Name " />
-                            </div>
-                            <div>
-                                <input type="email" placeholder="Email" />
-                            </div>
-                            <div>
-                                <input type="text" placeholder="Phone number" />
-                            </div>
-                            <div>
-                                <input type="text" class="message-box" placeholder="Message" />
-                            </div>
-                            <div class="d-flex ">
-                                <button>
-                                    SEND
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-7 px-0">
-                    <div class="map_container">
-                        <div class="map">
-                            <div id="googleMap"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- end contact section -->
-
-    <div class="footer_container">
-        <!-- info section -->
-
-        <section class="info_section ">
-            <div class="container">
-                <div class="row">
-                    <!-- <div class="col-md-6 col-lg-3 ">
-                        <div class="info_detail">
-                            <h4>
-                                CH Web Services
-                            </h4>
-                            <img src="/images/LogoCHC.png" style="width: 25px; height: 25px;">
-                            <p>
-                                True Swiss Quality
-                            </p>
-                            </img>
-                        </div>
-                    </div> -->
-                    <div class="col-md-6 col-lg-2 mx-auto">
-                        <div class="info_link_box">
-                            <h4>
-                                Links
-                            </h4>
-                            <div class="info_links">
-                                <a class="" href="index.html">
-                                    Home
-                                </a>
-                                <a class="" href="about.html">
-                                    About
-                                </a>
-                                <a class="" href="service.html">
-                                    Services
-                                </a>
-                                <a class="" href="pricing.html">
-                                    Pricing
-                                </a>
-                                <a class="" href="contact.html">
-                                    Contact Us
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!--SUBSCRIBE FORM-->
-
-                    <div class="col-md-6 col-lg-3 ">
-                        <h4>
-                            Subscribe
-                        </h4>
-                        <form
-                            action="https://github.us8.list-manage.com/subscribe/post?u=e694253557b8ba548c2a2c434&amp;id=a1e74be2a6&amp;f_id=007e0ee0f0"
-                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                            class="validate" target="_blank">
-                            <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required=""
-                                value="" />
-                            <div id="mce-responses" class="clear foot">
-                                <div class="response" id="mce-error-response" style="display: none"></div>
-                                <div class="response" id="mce-success-response" style="display: none"></div>
-                            </div>
-
-                            <button type="submit">
-                                Subscribe
-                            </button>
-                        </form>
-                    </div>
-
-                    <!--END SUBSCRIBE FORM-->
-
-
-
-
-                    <div class="col-md-6 col-lg-3 mb-0 ml-auto">
-                        <div class="info_contact">
-                            <h4>
-                                Contact Details
-                            </h4>
-                            <div class="contact_link_box">
-                                <a href="">
-                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span>
-                                        Rue du Grand-pré 28, 1202, Geneva, Switzerland
-                                    </span>
-                                </a>
-                                <a href="https://api.whatsapp.com/send?phone=0041767337484">
-                                    <img src="/images/WhatsApp.png" width="25px" height="25px">
-
-                                    <span>
-                                        +41767337484
-                                    </span>
-                                </a>
-                                <a href="mailto: chwms.geneva@gmail.com">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span>
-                                        chwms.geneva@gmail.com
-                                    </span>
-                                </a>
-
-                                <span>
-                                    v.16.091225
-                                </span>
-
-
-                            </div>
-                        </div>
-                        <div class="info_social">
-                            <a href="https://www.facebook.com/profile.php?id=100089251810177">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://github.com/charleshergott">
-                                <i class="fa fa-github" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/charles-hergott-aerospace-ict">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                            </a>
-                            <a
-                                href="https://join.slack.com/t/chwebservices/shared_invite/zt-2eoths4f8-hXHZHfkDymVsmtlopZqcFA">
-                                <img src="/images/Slack_icon_2019.png" style="width: 20px; height: 20px;"></img>
-                            </a>
-                            <a href="https://www.f6s.com/member/charleshergott2?follow=1" target="_blank" title="Follow Charles hergott
-            on F6S"><img src="https://www.f6s.com/images/f6s-follow-secondary.png" border="0" width="78" height="22 "
-                                    alt="Follow Charles hergott on F6S" style="width: 78px; height: 22px;
-            padding: 0px; margin: 0px;" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- end info section -->
-
-        <!-- footer section -->
-        <!-- <footer class="footer_section">
-          <div class="container">
-            <p>
-              &copy; <span id="displayYear"></span> All Rights Reserved By
-              <a href="https://html.design/">Free Html Templates</a>
-            </p>
-          </div>
-        </footer> -->
-        <!-- footer section -->
     </div>
 
-    <!-- jQery -->
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <!-- popper js -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
-    <!-- bootstrap js -->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
-    <!-- Google Map -->
+    <!-- services -->
+    <div class="container" id="services">
+        <div class="section-heading">
+            <h2>craft · code · convert</h2>
+            <p>End‑to‑end PWA & AI injection — no fluff, just working software.</p>
+        </div>
+        <div class="card-grid">
+            <div class="service-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/design--v1.png" alt="design"></div>
+                <h5>Project design</h5>
+                <p>AI‑generated mockups + 2h workshop to crystalize your goals. Free MVP draft to validate.</p>
+                <a href="#" class="card-link">explore <i class="fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/code.png" alt="code"></div>
+                <h5>hybrid coding</h5>
+                <p>Full PWA construction, Firestore registration, WhatsApp/AI plumbing — iOS & Android ready.</p>
+                <a href="#" class="card-link">tech stack <i class="fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/conference.png" alt="niche"></div>
+                <h5>niche communication</h5>
+                <p>Messaging that resonates with aerospace, logistics, or your vertical. sector DNA included.</p>
+                <a href="#" class="card-link">strategy <i class="fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/google-logo.png" alt="seo"></div>
+                <h5>SEO + social</h5>
+                <p>Get found. We weave discoverability into your PWA from day one, not as an afterthought.</p>
+                <a href="#" class="card-link">visibility <i class="fa-regular fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- portfolio -->
+    <div class="container" id="portfolio">
+        <div class="section-heading">
+            <h2>live pwas you can try</h2>
+            <p>installable, fast, and already in the wild.</p>
+        </div>
+        <div class="card-grid">
+            <div class="portfolio-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/quick-mode-on.png" alt="BlinkShare">
+                </div>
+                <h5>BlinkShare</h5>
+                <a href="https://blink-share.com" target="_blank" class="card-link">try app <i
+                        class="fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div class="portfolio-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/picture.png" alt="BlinkPic"></div>
+                <h5>BlinkPic</h5>
+                <a href="https://blinkpic-f7456.web.app/#/" target="_blank" class="card-link">try app <i
+                        class="fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div class="portfolio-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/no-wifi.png" alt="OfffLine"></div>
+                <h5>OfffLine</h5>
+                <a href="https://offfline.com/" target="_blank" class="card-link">try app <i
+                        class="fa-regular fa-arrow-right"></i></a>
+            </div>
+            <div class="portfolio-card">
+                <div class="card-img"><img src="https://img.icons8.com/ios/452/business-card.png" alt="business card">
+                </div>
+                <h5>VCard app</h5>
+                <a href="https://your-virtual-business-card.web.app/" target="_blank" class="card-link">try app <i
+                        class="fa-regular fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- about (compact + certificate) -->
+    <div class="container" id="about">
+        <div class="about-wrap">
+            <div class="about-img">
+                <img src="https://i.im.ge/2024/03/26/WFEbHq.WhatsApp-Image-2024-03-13-at-16-06-49.jpeg"
+                    alt="Charles Hergott" onerror="this.src='https://via.placeholder.com/160'">
+            </div>
+            <div class="about-text">
+                <h3>20 years bridging aerospace & digital</h3>
+                <p>Charles Hergott spent two decades decoding complex markets — now he builds PWAs that feel like
+                    native, with AI woven in. His focus: understand who you serve, then make them understand why your
+                    product is the one they need.</p>
+                <a href="/assets/Certificat_WPR_Charles_Hergott.pdf" class="cert-link" target="_blank"><i
+                        class="fa-regular fa-file-lines"></i> view certificate (WPR)</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- pricing -->
+    <div class="container" id="pricing">
+        <div class="section-heading">
+            <h2>investment tiers</h2>
+            <p>from zero‑risk explorer to full‑service concierge. 6‑month partnerships.</p>
+        </div>
+        <div class="pricing-tabs">
+            <div class="pricing-col">
+                <div class="pricing-name">Explorer</div>
+                <div class="pricing-price">0 <span>CHF</span></div>
+                <div class="pricing-period">proof of concept</div>
+                <ul class="feature-list">
+                    <li><i class="fa-regular fa-circle-check"></i> AI‑generated mockup</li>
+                    <li><i class="fa-regular fa-circle-check"></i> Smartphone‑ready draft</li>
+                    <li><i class="fa-regular fa-circle-check"></i> Free hosting (MVP)</li>
+                </ul>
+                <a href="#contact" class="pricing-btn">start exploration</a>
+            </div>
+            <div class="pricing-col popular">
+                <div class="pricing-name">Visionary+</div>
+                <div class="pricing-price">800 <span>CHF</span></div>
+                <div class="pricing-period">per month / 6 mo min</div>
+                <ul class="feature-list">
+                    <li><i class="fa-regular fa-circle-check"></i> 2h workshop & goal mapping</li>
+                    <li><i class="fa-regular fa-circle-check"></i> AI layout + your content</li>
+                    <li><i class="fa-regular fa-circle-check"></i> Firestore user registration</li>
+                    <li><i class="fa-regular fa-circle-check"></i> 1h weekly support</li>
+                    <li><i class="fa-regular fa-circle-check"></i> maintenance & troubleshooting</li>
+                </ul>
+                <a href="#contact" class="pricing-btn">accelerate growth</a>
+            </div>
+            <div class="pricing-col">
+                <div class="pricing-name">Concierge</div>
+                <div class="pricing-price">2400 <span>CHF</span></div>
+                <div class="pricing-period">per month / 6 mo min</div>
+                <ul class="feature-list">
+                    <li><i class="fa-regular fa-circle-check"></i> Everything in Visionary+</li>
+                    <li><i class="fa-regular fa-circle-check"></i> Full smartphone integration</li>
+                    <li><i class="fa-regular fa-circle-check"></i> Custom branding assets</li>
+                    <li><i class="fa-regular fa-circle-check"></i> 2h weekly dedicated support</li>
+                </ul>
+                <a href="#contact" class="pricing-btn">schedule call</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer / contact -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h5>CH Web Services</h5>
+                    <p style="color:#b3c2e0; margin-bottom:1.5rem;">True Swiss quality — we add AI into your digital
+                        workflow.</p>
+                    <div class="social-row">
+                        <a href="https://www.facebook.com/profile.php?id=100089251810177" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://github.com/charleshergott" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/charles-hergott-aerospace-ict" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://join.slack.com/t/chwebservices/shared_invite/zt-2eoths4f8-hXHZHfkDymVsmtlopZqcFA"
+                            target="_blank"><i class="fa-brands fa-slack"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Links</h5>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h5>Contact details</h5>
+                    <div class="contact-item"><i class="fa-regular fa-location-dot"></i> Rue du Grand‑pré 28, 1202
+                        Geneva</div>
+                    <div class="contact-item"><i class="fa-brands fa-whatsapp"></i> <a
+                            href="https://api.whatsapp.com/send?phone=0041763718903">+41 76 371 89 03</a></div>
+                    <div class="contact-item"><i class="fa-regular fa-envelope"></i> <a
+                            href="mailto:chwms.geneva@gmail.com">chwms.geneva@gmail.com</a></div>
+                </div>
+                <div>
+                    <h5>Subscribe</h5>
+                    <p style="color:#b3c2e0; font-size:0.9rem;">Get AI workflow tips & launch discounts.</p>
+                    <form class="subscribe-form"
+                        action="https://github.us8.list-manage.com/subscribe/post?u=e694253557b8ba548c2a2c434&amp;id=a1e74be2a6"
+                        method="post" target="_blank">
+                        <input type="email" name="EMAIL" placeholder="your@email.com" required>
+                        <button type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div style="display: flex; justify-content: space-between; color:#6679a3; font-size:0.85rem;">
+                <span>© 2025 Charles Hergott — AI / PWA architect</span>
+                <span class="version">v.21.02.2025</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Tidio (kept from original) -->
+    <script src="//code.tidio.co/zthb8osqqnpyac85qdvktnpzzlpniobq.js" async></script>
+    <!-- smooth scroll (optional) -->
     <script>
-        id = "mcjs" > !function (c, h, i, m, p) {
-            m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src =
-                i, p.parentNode.insertBefore(m, p)
-        }(document, "script",
-            "https://chimpstatic.com/mcjs-connected/js/users/e694253557b8ba548c2a2c434/7e808e31590693405e33e98b8.js");</script>
-
-
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">
-        (function ($) {
-            window.fnames = new Array();
-            window.ftypes = new Array();
-            fnames[0] = 'EMAIL';
-            ftypes[0] = 'email';
-            fnames[1] = 'FNAME';
-            ftypes[1] = 'text';
-            fnames[2] = 'LNAME';
-            ftypes[2] = 'text';
-            fnames[4] = 'PHONE';
-            ftypes[4] = 'phone';
-            fnames[3] = 'ADDRESS';
-            ftypes[3] = 'address';
-            fnames[5] = 'MMERGE5';
-            ftypes[5] = 'dropdown';
-        })(jQuery);
-        var $mcj = jQuery.noConflict(true);
+        // basic active nav highlight (just for demo)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
     </script>
-
-
 </body>
-
 
 </html>
